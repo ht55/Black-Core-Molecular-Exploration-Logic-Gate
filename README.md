@@ -14,7 +14,7 @@ pinned: false
 
 # Black-Core: Molecular Exploration Logic Gate
 
-A logic-driven multi-agent framework for autonomous molecular discovery and entropy analysis with LangGraph and RDkit.
+A logic-driven multi-agent framework for autonomous molecular discovery and entropy analysis with LangGraph and RDkit. Available on Hugging Face: [Black Core Logic Gate](https://huggingface.co/spaces/5labs/Black_Core_Logic_Gate) (Runs in a Docker container)
 
 ---
 
