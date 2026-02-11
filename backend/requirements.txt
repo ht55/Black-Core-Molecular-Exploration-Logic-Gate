@@ -1,0 +1,11 @@
+# Backend
+fastapi
+uvicorn
+langchain-google-genai  
+langgraph
+rdkit                   
+python-dotenv           
+
+# Infrastructure
+pydantic
+typing-extensions

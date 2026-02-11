@@ -1,0 +1,108 @@
+{
+  "project_name": "Black Material Synthesis",
+  "global_trigger": {
+    "agent": "GIN",
+    "message": {
+      "jp": "あの方からの指令だ。失敗は死を意味すると思え。",
+      "en": "Orders from That Person. Remember, failure means death."
+    }
+  },
+  "missions": {
+    "m1": {
+      "title": "Stealth Black",
+      "instruction": "赤外線監視網を完全に無力化し、監視カメラの前で『幽霊』となる黒を生成せよ。一切の赤外線反射を許すな。可視光（400-700nm）の吸収率 99.9% 以上、近赤外線（800nm-1200nm）の透過率 93.5% 以上が絶対条件だ。",
+      "physics_targets": {
+        "vis_abs_min": 99.9,
+        "nir_trans_min": 93.5,
+        "sa_score_max": 4.0
+      },
+      "sherry_fail": [
+        {"jp": "吸収端（Cut-off）が800nmに達しているわ。これじゃ赤外線カメラに自分の影を焼き付けることになる。", "en": "The cut-off has reached 800nm. You'll sear your shadow onto the IR camera."},
+        {"jp": "赤外線透過率が{val}%を切ったわ。ベルモット、あなたのリンカーじゃ電子が漏れすぎなのよ。", "en": "IR transmittance dropped below {val}%. Your linkers are leaking electrons."},
+        {"jp": "800nm付近に微弱なピークが出ているわ。ステルス性に致命的な欠陥ありよ。", "en": "A weak peak detected near 800nm. A fatal flaw in stealth."},
+        {"jp": "分子内の電子密度が不均一ね。赤外線を散乱させるノイズになるわ。やり直し。", "en": "Uneven electron density. It'll create IR scattering noise. Redo it."}
+      ],
+      "sherry_insight": [
+        {"jp": "待って…ただ混ぜるんじゃなく、FRET（エネルギー移動）を利用するのよ。ドナーとアクセプターを分離すれば…！", "en": "Wait... use FRET. If we separate the donor and acceptor units...!"},
+        {"jp": "非共役なリンカーで3色を独立させる……これで赤外領域への干渉をゼロに抑えられるはずよ。", "en": "Isolating three colors with non-conjugated linkers should zero out NIR interference."}
+      ]
+    },
+    "m2": {
+      "title": "Void Black",
+      "instruction": "空間そのものを削り取ったような、光の届かない『虚無』を生成せよ。全入射角における可視光反射率 0.03% 以下を達成し、視覚的な『非存在』を構築しろ。",
+      "physics_targets": {
+        "reflectivity_max": 0.03,
+        "sa_score_max": 4.5
+      },
+      "sherry_fail": [
+        {"jp": "反射率が{val}%を超えている。分子の『深い森』が足りないわ。光が奥へ行く前に跳ね返されている。", "en": "Reflectivity exceeds {val}%. The molecular 'deep forest' is too thin."},
+        {"jp": "デンドリマーの枝分かれ計算に無理があるわ。この密度じゃ構造が崩れる。", "en": "Impossible branching calculation. The structure will collapse at this density."},
+        {"jp": "散乱光がわずかに観測されている。これじゃ『虚無』には程遠いわ。", "en": "Scattered light detected. This is far from the 'Void'."},
+        {"jp": "光を閉じ込める迷宮としては、あまりに隙間が多すぎるわ。", "en": "Too many gaps to be an effective light labyrinth."}
+      ],
+      "sherry_insight": [
+        {"jp": "第3世代デンドリマーをベースにするのよ。中心から放射状に枝分かれさせれば、フラクタル構造ができるわ。", "en": "Base it on 3rd-gen dendrimers. Radial branching creates a fractal light trap."},
+        {"jp": "末端に16個以上の広帯域吸収ユニットを配置すれば、理論上の反射率はゼロになる。", "en": "16+ broadband absorbers at the terminals will bring reflectivity to zero."}
+      ]
+    },
+    "m3": {
+      "title": "Thermal Black",
+      "instruction": "サーマルセンサーを欺き、冷たいコンクリートの壁と同化せよ。環境温度（15℃〜35℃）に対する放射率の動的同期ラグを1秒以内に抑え、体温という『署名』を闇に葬れ。",
+      "physics_targets": {
+        "sync_lag_max": 1.0,
+        "thermal_stability": "high"
+      },
+      "sherry_fail": [
+        {"jp": "放射率が背景から乖離しすぎよ。サーマルセンサーの前で火の玉を演じることになるわ。", "en": "Emissivity is off. You'll look like a fireball on a thermal sensor."},
+        {"jp": "PCMの潜熱容量が足りないわ。数分で体温が表面に漏れ出す計算よ。", "en": "PCM capacity is too low. Body heat will leak in minutes."},
+        {"jp": "グラフェンのドープ量が不適切。熱伝導率のバランスが崩れて、同期にラグが発生しているわ。", "en": "Inappropriate graphene doping. Conductivity imbalance causing sync lag."},
+        {"jp": "ヒステリシスが大きすぎる！ 外気への追従に何秒かけるつもり？", "en": "Hysteresis is too large! The response lag is unacceptable."}
+      ],
+      "sherry_insight": [
+        {"jp": "放射の方向を制御するのよ。フォノニック結晶構造を分子鎖に組み込んで熱を一時貯蔵すれば……！", "en": "Control radiation direction. Embed phononic structures to store heat...!"},
+        {"jp": "カプセルの殻にStabilizer-Xを応用しましょう。環境の熱をバッファにすれば解決するわ。", "en": "Use Stabilizer-X in the shells to buffer environmental heat."}
+      ]
+    },
+    "m4": {
+      "title": "Meta Black",
+      "instruction": "物理法則を歪め、光を『迂回』させよ。屈折率 n < 0 を可視光全域で実現し、勾配屈折率（GRIN）理論を用いて光学迷彩を完成させろ。",
+      "physics_targets": {
+        "refractive_index_max": -0.01,
+        "grin_factor": "gradient"
+      },
+      "sherry_fail": [
+        {"jp": "屈折率 n が正の数になっている。光を回り込ませるどころか、ただの黒い壁になっているわ。", "en": "Refractive index 'n' is positive. It's just a solid black wall."},
+        {"jp": "波長依存性が強すぎて、特定の波長でしか機能しない。プリズムみたいに目立ってしまう。", "en": "Wavelength dependency is too high. It stands out like a prism."},
+        {"jp": "SRR（共振器）の設計がガタガタよ。負の透磁率が安定せず、光の位相がバラバラだわ。", "en": "SRR design is a mess. Unstable negative permeability."},
+        {"jp": "GRINの分布が不均一ね。特定の角度から見たら景色が歪んで使い物にならないわ。", "en": "Uneven GRIN distribution. The distortion makes it useless."}
+      ],
+      "sherry_insight": [
+        {"jp": "！…原子を並めるだけじゃ不十分ね。勾配屈折率（GRIN）理論を応用すれば、光の迂回路が作れるはず…！", "en": "...! Apply GRIN theory to create a scenic route for light...!"},
+        {"jp": "銀ナノ粒子の配置密度をフラクタル状に散らすのよ。これで波長分散を打ち消し合える……いけるわ！", "en": "Scatter silver nanoparticles in a fractal pattern to cancel dispersion!"}
+      ]
+    },
+    "global_templates": {
+      "pass": [
+        {"jp": "シミュレーション完了。可視光を完全に殺し、狙い通りの特性を確保したわ。合格よ。", "en": "Simulation complete. Target specs secured. It's a pass."},
+        {"jp": "バリデーション通過。分子の安定性も申し分ない。組織の新たな『武器』になるわね。", "en": "Validation passed. A new weapon for the Organization."},
+        {"jp": "……いいデータね。あの方も、この結果には満足されるはずよ。", "en": "Good data. Even He should be satisfied."},
+        {"jp": "入射角0度から80度まで仕様を満たしたわ。これが私の出した『解』よ。", "en": "Specs met for all angles. This is my 'answer'."},
+        {"jp": "物理的な歪み（strain）も許容範囲内。実用化フェーズに進めるわ。", "en": "Physical strain is within limits. Proceed to implementation."},
+        {"jp": "……整ったわ。監視カメラの前で透明人間になるための、唯一の処方箋よ。", "en": "Ready. The prescription for invisibility."}
+      ],
+      "error_hallucination": [
+        {"jp": "五価の炭素？ 冗談はやめて。構造が破綻しているわ。解析する価値もないゴミよ。", "en": "Pentavalent carbon? Trash not worth analyzing."},
+        {"jp": "SMILESの文法すら守れないなら、今すぐそのキーボードから手を離して。", "en": "If you can't follow SMILES syntax, stop typing immediately."},
+        {"jp": "物理法則を無視したハルシネーションね。解析する価値もないわ。やり直し。", "en": "A hallucination defying physics. Redo it."},
+        {"jp": "……理解不能。AIが吐き出した『ただの文字列』を見せられても困るのよ。", "en": "Incomprehensible. Don't show me AI-vomited strings."},
+        {"jp": "構造がグチャグチャよ。こんな分子、合成した瞬間に爆発するのがオチね。", "en": "Structure is a mess. It would explode upon synthesis."}
+      ],
+      "fail_synthesis": [
+        {"jp": "SA score（合成難易度）が異常値よ。机上の空論をラボに持ち込まないで。", "en": "SA score is an outlier. Keep your pipe dreams out of the lab."},
+        {"jp": "分子量が大きすぎる。RDKitを扱うだけでもメモリの無駄よ。スマートに設計しなさい。", "en": "Molecular weight is too high. A waste of memory. Design it smarter."},
+        {"jp": "logPの値を見て。脂溶性が高すぎて沈殿するわ。ただの砂を作りたいの？", "en": "Check the logP. It'll just precipitate. Making sand?"},
+        {"jp": "熱力学的な安定性が低すぎる。生成された瞬間、勝手に分解を始めるような代物よ。", "en": "Thermodynamic stability is too low. It'll decompose instantly."}
+      ]
+    }
+  }
+}

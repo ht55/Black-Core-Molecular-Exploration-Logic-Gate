@@ -1,0 +1,27 @@
+name: Sync to Hugging Face Hub
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true 
+
+      - name: Push to hub
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          
+          # Git LFSを有効化
+          git lfs install
+          
+          # 既存のロジックを尊重しつつプッシュ
+          git push --force https://5labs:$HF_TOKEN@huggingface.co/spaces/5labs/Black_Core_Logic_Gate main
