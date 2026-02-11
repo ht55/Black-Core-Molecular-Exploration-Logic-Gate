@@ -1,4 +1,13 @@
-<p align="center">
+---
+title: Black Core Logic Gate
+emoji: ⌬
+colorFrom: gray
+colorTo: black
+sdk: docker
+pinned: false
+---
+
+<p align="left">
   <img src="BCLG1.png" height="150" alt="App Screenshot 1" />
   <img src="BCLG2.png" height="150" alt="App Screenshot 2" />
 </p>
