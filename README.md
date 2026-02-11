@@ -1,8 +1,8 @@
 ---
 title: Black Core Logic Gate
-emoji: ⌬
+emoji: ⚙️
 colorFrom: gray
-colorTo: black
+colorTo: gray
 sdk: docker
 pinned: false
 ---
