@@ -14,7 +14,7 @@ pinned: false
 
 # Black-Core: Molecular Exploration Logic Gate
 
-A logic-driven multi-agent framework for autonomous molecular discovery and entropy analysis with LangGraph and RDkit. Available on Hugging Face: [Black Core Logic Gate](https://huggingface.co/spaces/5labs/Black_Core_Logic_Gate) (Runs in a Docker container)
+**[Available in English & Japanese]** A logic-driven multi-agent framework for autonomous molecular discovery and entropy analysis with LangGraph and RDkit. Available on Hugging Face: [Black Core Logic Gate](https://huggingface.co/spaces/5labs/Black_Core_Logic_Gate) (Runs in a Docker container)
 
 ---
 
@@ -230,7 +230,7 @@ See LICENSE for full terms.
 ## 🇯🇵 Japanese　
 本プロジェクトは、複数のAIエージェントによる自律的な分子探索と、堅実なロジック・物理シミュレーションを統合した研究開発プラットフォームです。LangGraphを用いたマルチエージェント・オーケストレーションにより、特定の物理特性（近赤外反射率、負の屈折率等）を持つ黒色分子構造を動的に生成・検証します。ユーザーによるパラメータ指定（scaffold, standard/taboo philosophy, entropy level）と、AIによる偶発的突然変異（serendipity philosophy）のハイブリッドな設計フローで、LangGraphの同じグラフ構造を使いつつ、Stateにどのモードで動くかのフラグを持たせ異なる挙動をさせ、ユーザーのターゲット数値、もしくは人間の想像を超えたアクシデントを人為的にかつランダムに引き起こし、ベンタブラックやF-35戦闘機用の塗装のような既存の限界を超える黒の発見を目指すこと、の両方の作動ができるようにしました。
 
-新しい究極の黒色分子の探究をゴールにしているため、PythonとRDkitでガチガチに縛りつけるよりも、AIの持つ人間の想像を超えるような未知の可能性を引き出すために、３つのLLM介入ノードを使用しつつも(Mutate nodeにも敢えてLLMを採用した理由の１つでもあります)、それぞれのLLMの自由度を的確にコントロールし、各所に幾重にも張り巡らせたハルシネーション対策を施すことで、LLMの暴走とハルシネーションを極限まで抑えた設計を構築しました。パラメータの種類やBase ScaffoldのSMILESなどを変えることで、さらに別の角度からの新分子の発見も期待できます。お気に入りの某探偵アニメ・コミックの黒ずくめの組織を意識したエージェント達が、４つの異なる性質の”究極の黒”を作るミッションの下に、AIと人間のInteractionの方法や深さを変えながら作ってあります。
+新しい究極の黒色分子の探究をゴールにしているため、PythonとRDkitでガチガチに縛りつけるよりも、AIの持つ人間の想像を超えるような未知の発想の可能性を引き出すために、３つのLLM介入ノードを使用しつつも(Mutate nodeにも敢えてLLMを採用した理由の１つでもあります)、それぞれのLLMの自由度を的確にコントロールし、各所に幾重にも張り巡らせたハルシネーション対策を施すことで、LLMの暴走とハルシネーションを極限まで抑えた設計を構築しました。パラメータの種類やBase ScaffoldのSMILESなどを変えることで、さらに別の角度からの新分子の発見も期待できます。黒ずくめの組織を意識したエージェント達が、４つの異なる性質の”究極の黒”を作るミッションの下に、AIと人間のInteractionの方法や深さを変えながら作ってあります。
 
 特に本システムでは、制約の厳しい軽量モデル（Gemini 2.0/2.5 Flash Lite）の無料枠をベースに作ったので、軽量モデルの可能性を極限まで引き出したルーティング・プロンプトになっています。コードの１つ１つ、プロンプトの一言一言が、気の遠くなるような試行錯誤を経て作られています。なお、無料LLMモデルのセレクションにあたり、複数のメジャーなLLMで基礎システムを回してテストした結果、一番賢く、科学的なハルシネーション(例えば、科学者であるはずのシェリーが”科学的な事実”と称して巧妙に嘘を言うなど)が一番低かったGemini2.0以上のFlashモデルに決めたという経緯があります。
 
