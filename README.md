@@ -14,7 +14,18 @@ pinned: false
 
 # Black-Core: Molecular Exploration Logic Gate
 
-**[Available in English & Japanese]** A logic-driven multi-agent framework for autonomous molecular discovery and entropy analysis with LangGraph and RDkit. Available on Hugging Face: [Black Core Logic Gate](https://huggingface.co/spaces/ht55-hf/Black_Core_Logic_Gate) (Runs in a Docker container)
+**[Available in English & Japanese]** 
+
+A logic-driven multi-agent framework for autonomous molecular discovery and entropy analysis with LangGraph and RDkit. Available on Hugging Face: [Black Core Logic Gate](https://huggingface.co/spaces/ht55-hf/Black_Core_Logic_Gate) (Runs in a Docker container)
+
+---
+
+## Why This Exists
+
+I've always been drawn to black — not as an absence of color, but as a physical phenomenon with measurable, engineerable properties. Vantablack absorbs 99.965% of light. The F-35's surface coating makes an aircraft invisible to radar. There's something deeply compelling about a color that can do that.
+
+The deeper motivation was about LLMs. I wanted to see where they break under hard scientific constraints, where hallucinations aren't just wrong but specifically, chemically wrong in ways that matter. The answer was to pair LLM creativity with RDKit as a deterministic gatekeeper. Chemical validity is binary: a molecule either passes or it doesn't, and that hard constraint turned out to be what makes the LLM's creativity useful rather than dangerous.
+Serendipity mode exists because sometimes a structurally questionable output points in a direction no one thought to look. For researchers, that's not a bug.
 
 ---
 
