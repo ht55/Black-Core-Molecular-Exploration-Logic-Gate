@@ -170,7 +170,7 @@ def calculate_metrics(smiles: str) -> Dict[str, Any]:
         "mw": round(Descriptors.MolWt(mol), 2),
         "logp": round(Descriptors.MolLogP(mol), 2),
         "tpsa": round(Descriptors.TPSA(mol), 2),
-        "rings": Chem.rdMolDescriptors.GetRingCount(mol),
+        "rings": mol.GetRingInfo().NumRings(),
         "heavy_atoms": mol.GetNumHeavyAtoms()
     }
 

@@ -4,7 +4,8 @@ uvicorn
 langchain-google-genai  
 langgraph
 rdkit                   
-python-dotenv           
+python-dotenv   
+pytest        
 
 # Infrastructure
 pydantic

@@ -8,12 +8,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from langchain_google_genai import ChatGoogleGenerativeAI
 from graph_engine import app as chain
 from engine import BlackPhysicsEngine
-from dotenv import load_dotenv
 from graph_engine import MASTER_ASSETS
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
-load_dotenv()
 
 app.add_middleware(
     CORSMiddleware,
@@ -40,7 +38,7 @@ async def stream_mission(
         msg = "【API制限】APIリソースが尽きました。12:00 AM PT にリセット予定。明日またお試しください。" if is_jp else "[API LIMIT] API resources exhausted. Reset scheduled for 12:00 AM PT. Please try again tomorrow."
         raise HTTPException(status_code=429, detail=msg)
 
-    api_key = key or os.getenv("GOOGLE_API_KEY")
+    api_key = key 
     if not api_key or len(api_key) < 10:
         raise HTTPException(
             status_code=401, 
