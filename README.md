@@ -34,9 +34,6 @@ Serendipity mode exists because sometimes a structurally questionable output poi
 This system operates through a series of specialized nodes and routers to balance creative molecular mutation with rigorous chemical validation.
 
 ---
-> **License:** Polyform Noncommercial — research and personal use only.
-> Commercial use is not permitted without explicit permission.
----
 
 ### 1. Routing & Orchestration
 
@@ -226,6 +223,18 @@ This project proves that with superior architectural design, professional-grade 
         ├── MissionWindow.tsx  # Primary UI & 3Dmol.js logic
         └── components/MissionHub.tsx 
 ```
+
+---
+
+## Tests
+
+```bash
+pytest test_main.py test_nodes.py -v
+```
+
+**Results (38/38 passed)**
+- `test_main.py` — pure functions, API validation, router logic (21 tests)
+- `test_nodes.py` — LLM mock tests for design_node, mutate_node, analysis_node (17 tests)
 
 ---
 
